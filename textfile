@@ -1,0 +1,21 @@
+ const count = document.getElementById("counter")
+            const sub = document.getElementById("decrement")
+            const add = document.getElementById("increment")
+
+            let number = count.innerHTML;
+
+            sub.addEventListener('click', function(){
+                number--;
+                addToHTML(number)
+            })
+
+            add.addEventListener('click', function(){
+                number++;
+                addToHTML(number)
+            })
+
+            function addToHTML(value){
+                number=value
+                console.log(number)
+                count.innerHTML = value;
+            }
